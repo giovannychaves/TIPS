@@ -1,20 +1,15 @@
 @import 'header';
 
 body{
-    background-color: blue;
+    background-color: white;
     @include font();
     h1{
-        box-shadow: 3px 3px 3px rgba(0,0,0,.5);
-        background-color: red;
-        color: white;
+        box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+        color: black;
     }
     div{
-        display: flex;
-        justify-content: flex-start;
-        background-color: tomato;
         color: black;
         &:hover{
-            background-color: white;
             color: black;
         }
     }
