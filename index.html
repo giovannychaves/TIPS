@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscar Endereço</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+    <style>
+        span{
+            display: inline-block;
+        }
+        p{
+            display: inline;
+            color: purple;
+        }
+        .piada{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Endereço</h1>
+
+    <label for="cep">Digite o CEP:</label>
+    <input class="cepInput" type="number" id="cep" style="width: 200px">
+    <button class="btnCep">Buscar</button>
+    <hr>
+    <div class="divCep"> 
+        <span>Cep: </span> <p class="cep"></p> <br><br>
+        <span>Logradouro: </span> <p class="logradouro"></p> <br><br>
+        <span>Complemento: </span> <p class="complemento"></p> <br><br>
+        <span>Bairro: </span> <p class="bairro"></p> <br><br>
+        <span>Localidade: </span> <p class="localidade"></p> <br><br>
+        <span>UF: </span> <p class="uf"></p>
+    </div>
+    <hr>
+    <h1>Bitcoin</h1>
+
+    <div>
+        <span>Preço em reais para compra de bitcoin: </span> <p class="bitCoinReal"></p>
+    </div>
+    <hr>
+
+    <div>
+        <h1>Chucknorris</h1>
+
+        <span>Random Chucknorris joke: </span> <p class="piada"></p>
+        <br>
+        <br>
+        <button class="btn-piada">NEXT JOKE</button>
+    </div>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>
