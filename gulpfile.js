@@ -3,6 +3,8 @@ const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const concat = require("gulp-concat");
+const babel = require("gulp-babel");
+const uglify = require("gulp-uglify");
 
 
 // SASS
@@ -43,12 +45,18 @@ function browser(){
 gulp.task('browser-sync', browser);
 
 
+//Javascript
 function gulpJS(){
     return gulp.src('./src/js/*.js')
     .pipe(concat('all.js'))
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js/'))
+    .pipe(browserSync.stream());
 };
 gulp.task('allJS', gulpJS);
 
 
-gulp.task('default', gulp.parallel('watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('watch', 'browser-sync', 'sass', 'allJS'));
