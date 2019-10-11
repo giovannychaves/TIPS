@@ -5,5 +5,7 @@ Helps
 * Configuração de taks do gulp 
 * gulp-sass
 * gulp-autoprefixer
-* gulp-babel
 * gulp browser-sync
+* gulp-concat
+* gulp-babel
+* gulp-uglify
